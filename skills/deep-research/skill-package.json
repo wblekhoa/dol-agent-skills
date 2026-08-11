@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "name": "deep-research",
+  "version": "0.1.0",
+  "owner": {
+    "kind": "public-repository",
+    "id": "wblekhoa/dol-agent-skills"
+  },
+  "provenance": {
+    "kind": "derived",
+    "statement": "DOL-authored portable workflow informed by internal operating experience and the MIT-licensed references listed below; no source text or code is copied.",
+    "sources": [
+      {
+        "url": "https://github.com/daymade/claude-code-skills/tree/main/deep-research",
+        "license": "MIT",
+        "contribution": "source typing, staged research, and quality-gate inspiration"
+      },
+      {
+        "url": "https://github.com/Weizhena/Deep-Research-skills",
+        "license": "MIT",
+        "contribution": "outline-before-investigation workflow inspiration"
+      }
+    ]
+  },
+  "publication": {
+    "intent": "PUBLIC",
+    "decision": "PUBLIC",
+    "canonical_repository": "https://github.com/wblekhoa/dol-agent-skills",
+    "canonical_path": "skills/deep-research",
+    "holds": [],
+    "private_markers": [
+      "company-internal",
+      "internal-only",
+      "private-adapter"
+    ]
+  },
+  "license": "MIT",
+  "compatibility": {
+    "format": "agentskills.io",
+    "adapters": {
+      "claude-code": {
+        "projection": ".claude/skills/deep-research",
+        "discovery": "native-project"
+      },
+      "codex": {
+        "projection": ".agents/skills/deep-research",
+        "discovery": "native-project"
+      },
+      "gemini-cli": {
+        "projection": ".agents/skills/deep-research",
+        "discovery": "native-project"
+      },
+      "openclaw": {
+        "projection": ".agents/skills/deep-research",
+        "discovery": "configured-agent-workspace"
+      },
+      "hermes": {
+        "projection": ".agents/skills/deep-research",
+        "discovery": "external-dir-or-bridge"
+      }
+    }
+  },
+  "verification": {
+    "last_verified": "2026-08-11",
+    "receipt": "verification-receipt.json",
+    "trigger_cases": "evals/trigger-cases.json",
+    "test": "evals/verify.mjs"
+  },
+  "usage": {
+    "guide": "README.md",
+    "personalization": "project-instructions-or-owned-fork",
+    "default_prompt": "Use deep-research to evaluate the topic for this project's outcome, verify current claims, and return one Adopt/Adapt/Reject/Defer recommendation."
+  }
+}

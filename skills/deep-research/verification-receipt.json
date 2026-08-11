@@ -1,0 +1,122 @@
+{
+  "schema_version": 2,
+  "name": "deep-research",
+  "version": "0.1.0",
+  "evaluated_at": "2026-08-11T03:55:39.066Z",
+  "evaluator": "scripts/skill-package.mjs",
+  "source_hash": "fcfec587c5bd87b14ffec842925724afce655a1bfa66e48a2774e5206b960077",
+  "package_status": "PASS",
+  "publication_status": "PASS",
+  "test": {
+    "path": "evals/verify.mjs",
+    "sha256": "b7b5a584916e28e6a68abb3afd231810d951adab20db64d70b65c020fcaf21b1",
+    "execution": "isolated-package-copy",
+    "status": "PASS",
+    "evidence": "deep-research package verify PASS · 20 balanced trigger cases"
+  },
+  "checks": [
+    {
+      "id": "manifest-schema",
+      "status": "PASS",
+      "message": "schema_version must equal 1"
+    },
+    {
+      "id": "package-tree",
+      "status": "PASS",
+      "message": "package contains regular files and directories only",
+      "evidence": []
+    },
+    {
+      "id": "frontmatter-syntax",
+      "status": "PASS",
+      "message": "frontmatter matches the supported portable YAML subset"
+    },
+    {
+      "id": "identity",
+      "status": "PASS",
+      "message": "manifest and SKILL.md need the same valid name plus a description"
+    },
+    {
+      "id": "portable-frontmatter",
+      "status": "PASS",
+      "message": "frontmatter uses portable Agent Skills fields"
+    },
+    {
+      "id": "version",
+      "status": "PASS",
+      "message": "version must be semver"
+    },
+    {
+      "id": "owner",
+      "status": "PASS",
+      "message": "owner.kind and owner.id are required"
+    },
+    {
+      "id": "distribution",
+      "status": "PASS",
+      "message": "publication intent and decision must use the governed taxonomy"
+    },
+    {
+      "id": "hold-reason",
+      "status": "PASS",
+      "message": "not held"
+    },
+    {
+      "id": "provenance",
+      "status": "PASS",
+      "message": "provenance and source rights are explicit",
+      "evidence": []
+    },
+    {
+      "id": "license",
+      "status": "PASS",
+      "message": "license=MIT"
+    },
+    {
+      "id": "runtime-compatibility",
+      "status": "PASS",
+      "message": "all five DOL lanes declare explicit discovery adapters"
+    },
+    {
+      "id": "consumer-guide",
+      "status": "PASS",
+      "message": "package-local consumer guide=README.md"
+    },
+    {
+      "id": "trigger-cases",
+      "status": "PASS",
+      "message": "cases=20, use=10, do_not_use=10, unique_ids=20"
+    },
+    {
+      "id": "public-safety",
+      "status": "PASS",
+      "message": "no secret-like values, private paths, configured private markers, or broken local links",
+      "evidence": []
+    },
+    {
+      "id": "context-budget",
+      "status": "PASS",
+      "message": "SKILL.md lines=150/500, bytes=6023/24000, estimated_tokens=1506"
+    },
+    {
+      "id": "verification-freshness",
+      "status": "PASS",
+      "message": "last_verified age_days=0; receipt path verification-receipt.json"
+    },
+    {
+      "id": "verification-test",
+      "status": "PASS",
+      "message": "package-local test=evals/verify.mjs"
+    },
+    {
+      "id": "verification-receipt",
+      "status": "PASS",
+      "message": "receipt generation pre-audit"
+    },
+    {
+      "id": "public-owner",
+      "status": "PASS",
+      "message": "PUBLIC requires an explicit GitHub canonical repository and skills/<name> path"
+    }
+  ]
+}

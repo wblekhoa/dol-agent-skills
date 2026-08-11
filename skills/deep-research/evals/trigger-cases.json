@@ -1,0 +1,142 @@
+[
+  {
+    "id": "use-compare-frameworks",
+    "category": "technology-adoption",
+    "prompt": "Compare two web frameworks for our next product and recommend which one fits the existing architecture.",
+    "expected": "USE",
+    "rationale": "The decision needs current multi-source comparison against a host system."
+  },
+  {
+    "id": "use-library-adoption",
+    "category": "library-adoption",
+    "prompt": "Research this open-source library, assess its quality, and decide whether we should adopt or adapt it.",
+    "expected": "USE",
+    "rationale": "Repository evidence, alternatives, rights, and integration cost can change the decision."
+  },
+  {
+    "id": "use-vendor-selection",
+    "category": "vendor-selection",
+    "prompt": "Evaluate three observability vendors for this product, including privacy, cost, and migration risk.",
+    "expected": "USE",
+    "rationale": "A consequential vendor choice needs several current primary sources."
+  },
+  {
+    "id": "use-architecture-pattern",
+    "category": "architecture-decision",
+    "prompt": "Determine whether event sourcing is appropriate for our current workflow and compare lighter alternatives.",
+    "expected": "USE",
+    "rationale": "The answer depends on architecture fit and a bounded adoption decision."
+  },
+  {
+    "id": "use-external-proposal",
+    "category": "proposal-review",
+    "prompt": "Challenge this consultant proposal with fresh evidence and return Adopt, Adapt, Reject, or Defer.",
+    "expected": "USE",
+    "rationale": "The proposal requires evidence-backed counter-review rather than acceptance at face value."
+  },
+  {
+    "id": "use-benchmark-claim",
+    "category": "claim-verification",
+    "prompt": "Verify the claim that one agent harness improves the same model from 42 percent to 78 percent and explain applicability here.",
+    "expected": "USE",
+    "rationale": "A material benchmark claim needs source and methodology verification."
+  },
+  {
+    "id": "use-revisit-rejection",
+    "category": "decision-revisit",
+    "prompt": "A previously rejected tool released a major new version; reassess whether the rejection still holds.",
+    "expected": "USE",
+    "rationale": "Material new evidence justifies reopening the decision trail."
+  },
+  {
+    "id": "use-security-tool",
+    "category": "risk-adoption",
+    "prompt": "Research whether to introduce this security scanner, including data handling, false positives, and maintenance cost.",
+    "expected": "USE",
+    "rationale": "Security and operational tradeoffs require current authoritative evidence."
+  },
+  {
+    "id": "use-document-pipeline",
+    "category": "workflow-adoption",
+    "prompt": "Compare document extraction pipelines and propose the smallest pilot for our knowledge system.",
+    "expected": "USE",
+    "rationale": "Multiple viable workflows must be compared against project constraints."
+  },
+  {
+    "id": "use-complex-knowledge",
+    "category": "knowledge-synthesis",
+    "prompt": "Research current first-principles product frameworks and decide what our documentation process should adopt.",
+    "expected": "USE",
+    "rationale": "The request needs current multi-source synthesis and a host-specific recommendation."
+  },
+  {
+    "id": "skip-current-version",
+    "category": "simple-lookup",
+    "prompt": "What is the latest stable version of Astro?",
+    "expected": "DO_NOT_USE",
+    "rationale": "One current official lookup is sufficient."
+  },
+  {
+    "id": "skip-single-page",
+    "category": "single-source-extraction",
+    "prompt": "Read this one documentation page and summarize its setup steps.",
+    "expected": "DO_NOT_USE",
+    "rationale": "The task is extraction from a supplied source, not a multi-source decision."
+  },
+  {
+    "id": "skip-code-review",
+    "category": "code-review",
+    "prompt": "Review this pull request for bugs and missing tests.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Use the code-review workflow and repository evidence."
+  },
+  {
+    "id": "skip-debug",
+    "category": "debugging",
+    "prompt": "Debug why this unit test fails after the latest local change.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Use systematic debugging against local runtime evidence."
+  },
+  {
+    "id": "skip-ui-audit",
+    "category": "ui-audit",
+    "prompt": "Audit this page for spacing, visual hierarchy, and accessibility defects.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Use a UI quality audit with rendered evidence."
+  },
+  {
+    "id": "skip-fixed-execution",
+    "category": "implementation",
+    "prompt": "We already chose the library; implement the approved adapter and run its tests.",
+    "expected": "DO_NOT_USE",
+    "rationale": "The decision is fixed and the remaining task is execution."
+  },
+  {
+    "id": "skip-translation",
+    "category": "transformation",
+    "prompt": "Translate this paragraph from English to Vietnamese.",
+    "expected": "DO_NOT_USE",
+    "rationale": "A direct transformation needs no research workflow."
+  },
+  {
+    "id": "skip-rewrite",
+    "category": "editing",
+    "prompt": "Rewrite this introduction in a concise human voice.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Editing quality is the outcome; external adoption evidence is irrelevant."
+  },
+  {
+    "id": "skip-local-fact",
+    "category": "local-inspection",
+    "prompt": "Which file owns the current sidebar route in this repository?",
+    "expected": "DO_NOT_USE",
+    "rationale": "Inspect the local source of truth directly."
+  },
+  {
+    "id": "skip-creative-names",
+    "category": "creative-ideation",
+    "prompt": "Suggest ten names for this internal prototype.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Open-ended ideation does not require evidence-backed adoption research."
+  }
+]
