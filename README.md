@@ -10,7 +10,7 @@ security policy, runtime, release cadence, or contribution workflow.
 
 | Skill | Use when | Version |
 |---|---|---|
-| [Deep Research](skills/deep-research/README.md) | A decision needs current multi-source evidence, comparison, and counter-review | 0.1.0 |
+| [Deep Research](skills/deep-research/README.md) | A decision needs current multi-source evidence, comparison, and counter-review | 0.2.0 |
 
 ## Install
 
@@ -35,8 +35,8 @@ start a fresh target-runtime session and verify one positive and one counterexam
 
 ## Verify
 
-Each published package contains its own deterministic evaluation and hash-bound verification
-receipt:
+Each published package contains deterministic trigger and report-contract evaluation plus a
+hash-bound verification receipt:
 
 ```sh
 node skills/deep-research/evals/verify.mjs

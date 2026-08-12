@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "deep-research",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "owner": {
     "kind": "public-repository",
     "id": "wblekhoa/dol-agent-skills"
@@ -61,14 +61,15 @@
     }
   },
   "verification": {
-    "last_verified": "2026-08-11",
+    "last_verified": "2026-08-12",
     "receipt": "verification-receipt.json",
     "trigger_cases": "evals/trigger-cases.json",
+    "report_cases": "evals/report-quality-cases.json",
     "test": "evals/verify.mjs"
   },
   "usage": {
     "guide": "README.md",
     "personalization": "project-instructions-or-owned-fork",
-    "default_prompt": "Use deep-research to evaluate the topic for this project's outcome, verify current claims, and return one Adopt/Adapt/Reject/Defer recommendation."
+    "default_prompt": "Use deep-research to evaluate the topic for this project's outcome. Bound the decision and stopping condition, verify current claims, and return one Adopt/Adapt/Reject/Defer recommendation."
   }
 }
