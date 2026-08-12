@@ -1,12 +1,16 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "name": "deep-research",
   "version": "0.2.0",
-  "evaluated_at": "2026-08-12T02:06:19.033Z",
+  "evaluated_at": "2026-08-12T08:19:21.532Z",
   "evaluator": "scripts/skill-package.mjs",
   "source_hash": "981e8d097470fd9c730373ede825ffe1369549a0c75bb6b1faced68b01486456",
   "package_status": "PASS",
   "publication_status": "PASS",
+  "entrypoint": {
+    "path": "SKILL.md",
+    "sha256": "720df32fc9e7321c7f9f19da6d9b45b0d91c269a133257b7f76f78b0879d21d3"
+  },
   "test": {
     "path": "evals/verify.mjs",
     "sha256": "b293695ee51e6b976c8b8fdffad755b333986f6fde51cb7162f9ce9b52837128",
