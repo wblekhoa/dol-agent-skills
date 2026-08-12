@@ -21,8 +21,9 @@ Do not install over an existing skill with the same name unless its owner and ro
 Example prompt:
 
 ```text
-Use deep-research to evaluate <topic> for <project outcome>. Verify current claims, compare the
-options against the host project, and return Adopt/Adapt/Reject/Defer with evidence and residual risk.
+Use deep-research to evaluate <topic> for <project outcome>. Bound the decision and stopping
+condition, verify current claims, compare the options against the host project, and return
+Adopt/Adapt/Reject/Defer with evidence and residual risk.
 ```
 
 The skill should decline simple lookups, ordinary code review, and UI-only audits that have a narrower
@@ -38,6 +39,10 @@ Validate personalization with one task that should trigger the skill and one nea
 not. Keep the portable trigger boundary unchanged unless the package itself is intentionally revised
 and re-evaluated.
 
+Useful host-level controls include an allowed or preferred source set, excluded domains, decision
+risk threshold, time horizon, output language, and rules for handling private data. Keep those in the
+host instructions rather than embedding organization policy in the portable package.
+
 ## Verify
 
 Before relying on the skill:
@@ -45,7 +50,19 @@ Before relying on the skill:
 - confirm the package audit and package-local verification receipt pass;
 - confirm the installed files match their install receipt;
 - start a fresh runtime session and verify the skill is actually discoverable;
-- run one positive and one counterexample prompt using the target project's real instructions.
+- run one positive and one counterexample prompt using the target project's real instructions;
+- replay the report-quality cases that match the host's highest-risk research decisions.
+
+Run the deterministic package checks with:
+
+```sh
+node evals/verify.mjs
+```
+
+The trigger corpus verifies routing boundaries. The report-quality corpus defines adversarial
+behaviors for conflict, uncertainty, source injection, scope control, citation support, host fit, and
+privacy. Passing the deterministic verifier proves those contracts are present and well formed; a
+fresh runtime replay is still required to prove an agent follows them.
 
 Filesystem presence proves projection only. It does not prove that a runtime discovered or selected
 the skill.
