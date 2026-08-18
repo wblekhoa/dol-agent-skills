@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Storage Audit"
+  short_description: "Audit oversized Codex storage safely"
+  default_prompt: "Use $audit-codex-storage to inspect Codex disk and memory pressure, classify cleanup candidates, and stop before mutation unless I approve exact action IDs."

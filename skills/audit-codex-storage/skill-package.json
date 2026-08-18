@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "name": "audit-codex-storage",
+  "version": "0.1.0",
+  "owner": {
+    "kind": "public-repository",
+    "id": "wblekhoa/dol-agent-skills"
+  },
+  "provenance": {
+    "kind": "original",
+    "statement": "Original portable workflow and read-only helper created from repeated Codex storage-retention audits; no private audit data, session content, or host-specific policy is included."
+  },
+  "publication": {
+    "intent": "PUBLIC",
+    "decision": "PUBLIC",
+    "canonical_repository": "https://github.com/wblekhoa/dol-agent-skills",
+    "canonical_path": "skills/audit-codex-storage",
+    "holds": [],
+    "private_markers": [
+      "/Users/",
+      "@gmail.com",
+      "company-internal",
+      "internal-only",
+      "private-adapter"
+    ]
+  },
+  "license": "MIT",
+  "compatibility": {
+    "format": "agentskills.io",
+    "adapters": {
+      "claude-code": {
+        "projection": ".claude/skills/audit-codex-storage",
+        "discovery": "native-project"
+      },
+      "codex": {
+        "projection": ".agents/skills/audit-codex-storage",
+        "discovery": "native-project"
+      },
+      "gemini-cli": {
+        "projection": ".agents/skills/audit-codex-storage",
+        "discovery": "native-project"
+      },
+      "openclaw": {
+        "projection": ".agents/skills/audit-codex-storage",
+        "discovery": "configured-agent-workspace"
+      },
+      "hermes": {
+        "projection": ".agents/skills/audit-codex-storage",
+        "discovery": "external-dir-or-bridge"
+      }
+    }
+  },
+  "verification": {
+    "last_verified": "2026-08-18",
+    "receipt": "verification-receipt.json",
+    "trigger_cases": "evals/trigger-cases.json",
+    "report_cases": "evals/report-quality-cases.json",
+    "test": "evals/verify.mjs"
+  },
+  "usage": {
+    "guide": "README.md",
+    "personalization": "host-retention-policy-or-owned-fork",
+    "default_prompt": "Use audit-codex-storage to run a read-only strict audit, report disk and process-memory evidence separately, and stop before mutation unless exact action IDs are approved."
+  }
+}

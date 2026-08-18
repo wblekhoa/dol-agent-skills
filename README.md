@@ -11,6 +11,7 @@ security policy, runtime, release cadence, or contribution workflow.
 | Skill | Use when | Version |
 |---|---|---|
 | [Deep Research](skills/deep-research/README.md) | A decision needs current multi-source evidence, comparison, and counter-review | 0.2.0 |
+| [Audit Codex Storage](skills/audit-codex-storage/README.md) | Codex storage is unexpectedly large or disk/process-memory pressure needs a safe audit | 0.1.0 |
 
 ## Install
 
@@ -24,10 +25,10 @@ Then copy only the package you need:
 
 ```sh
 # Codex, Gemini CLI/Antigravity, or a configured OpenClaw/Hermes workspace
-cp -R dol-agent-skills/skills/deep-research .agents/skills/deep-research
+cp -R dol-agent-skills/skills/<skill-name> .agents/skills/<skill-name>
 
 # Claude Code
-cp -R dol-agent-skills/skills/deep-research .claude/skills/deep-research
+cp -R dol-agent-skills/skills/<skill-name> .claude/skills/<skill-name>
 ```
 
 Read the package README before installation. Filesystem placement does not prove runtime discovery;
@@ -40,6 +41,7 @@ hash-bound verification receipt:
 
 ```sh
 node skills/deep-research/evals/verify.mjs
+node skills/audit-codex-storage/evals/verify.mjs
 ```
 
 The receipt proves the published package passed its declared local checks. It does not claim native

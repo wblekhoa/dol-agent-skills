@@ -1,0 +1,142 @@
+[
+  {
+    "id": "use-codex-root-hundreds-gb",
+    "category": "storage-pressure",
+    "prompt": "My ~/.codex folder is hundreds of gigabytes. Find the cause and tell me what can be reclaimed safely.",
+    "expected": "USE",
+    "rationale": "Codex-owned storage pressure is the primary problem."
+  },
+  {
+    "id": "use-low-disk-strict-audit",
+    "category": "strict-audit",
+    "prompt": "Disk space is low. Run the strict Codex retention audit and report the generated plan even if it exits 1.",
+    "expected": "USE",
+    "rationale": "The request names the strict storage audit and non-zero reporting contract."
+  },
+  {
+    "id": "use-session-storage-review",
+    "category": "session-review",
+    "prompt": "Review old Codex session storage, but do not delete any session just because it is old.",
+    "expected": "USE",
+    "rationale": "High-risk Codex session review needs the retention evidence model."
+  },
+  {
+    "id": "use-generated-media-cleanup",
+    "category": "generated-media",
+    "prompt": "Generated images and visualizations under Codex are large. Audit which ones are exported, pinned, or still owned by active work.",
+    "expected": "USE",
+    "rationale": "Codex-generated media needs ownership and resumability checks."
+  },
+  {
+    "id": "use-codex-memory-pressure",
+    "category": "process-memory",
+    "prompt": "ChatGPT is using 60 GB of application memory. Compare Codex process-tree RSS with disk storage and investigate them separately.",
+    "expected": "USE",
+    "rationale": "The skill explicitly separates process memory from disk pressure."
+  },
+  {
+    "id": "use-execute-pending-review",
+    "category": "review-queues",
+    "prompt": "List every execute_pending and manual_review item in the Codex retention plan before proposing cleanup.",
+    "expected": "USE",
+    "rationale": "These queues are part of the required storage audit report."
+  },
+  {
+    "id": "use-approved-action-ids",
+    "category": "controlled-apply",
+    "prompt": "I approved two exact retention action IDs. Verify the plan hash is fresh, apply only those IDs, then re-audit.",
+    "expected": "USE",
+    "rationale": "A bounded, hash-bound Codex retention apply belongs to this workflow."
+  },
+  {
+    "id": "use-no-local-planner",
+    "category": "portable-fallback",
+    "prompt": "This machine has no Codex retention script. Give me a read-only storage and RSS inventory without inventing reclaimable bytes.",
+    "expected": "USE",
+    "rationale": "The portable fallback covers machines without a local planner."
+  },
+  {
+    "id": "use-failed-owner-task",
+    "category": "owner-review",
+    "prompt": "Several large Codex tasks return errors when contacted. Inspect their storage safely instead of treating the error as deletion proof.",
+    "expected": "USE",
+    "rationale": "Owner-task errors are review signals within the storage decision model."
+  },
+  {
+    "id": "use-cold-session-pressure",
+    "category": "cold-storage",
+    "prompt": "cold_sessions is the largest Codex category. Determine whether it is a review-only queue or a safe reclaim candidate.",
+    "expected": "USE",
+    "rationale": "Cold-session pressure needs category classification and explicit approval gates."
+  },
+  {
+    "id": "skip-react-component",
+    "category": "frontend-implementation",
+    "prompt": "Build a React component that displays a storage usage progress bar.",
+    "expected": "DO_NOT_USE",
+    "rationale": "This is frontend implementation, not a Codex storage audit."
+  },
+  {
+    "id": "skip-node-modules",
+    "category": "product-repository",
+    "prompt": "Delete node_modules in this product repository and reinstall dependencies.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Product-repository dependency cleanup is outside Codex-owned storage."
+  },
+  {
+    "id": "skip-generic-mac-storage",
+    "category": "whole-machine-storage",
+    "prompt": "Which applications use the most disk space on my Mac?",
+    "expected": "DO_NOT_USE",
+    "rationale": "A generic whole-machine storage inventory has a broader owner."
+  },
+  {
+    "id": "skip-unrelated-database",
+    "category": "database-engineering",
+    "prompt": "Review the schema and query performance of our production SQLite database.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Database engineering is unrelated to Codex history retention."
+  },
+  {
+    "id": "skip-product-memory-leak",
+    "category": "application-profiling",
+    "prompt": "Profile a memory leak in our Node.js API server under load.",
+    "expected": "DO_NOT_USE",
+    "rationale": "The process is not Codex or ChatGPT."
+  },
+  {
+    "id": "skip-generate-image",
+    "category": "image-generation",
+    "prompt": "Generate an illustration of a hard drive with a warning badge.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Image generation is not storage retention."
+  },
+  {
+    "id": "skip-deploy-site",
+    "category": "deployment",
+    "prompt": "Deploy the documentation site to Cloudflare Pages.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Deployment has a dedicated workflow."
+  },
+  {
+    "id": "skip-figma-layer-cleanup",
+    "category": "figma-document",
+    "prompt": "Find and remove unused hidden layers in this Figma file.",
+    "expected": "DO_NOT_USE",
+    "rationale": "Figma document cleanup is not Codex storage cleanup."
+  },
+  {
+    "id": "skip-cloud-pricing",
+    "category": "market-research",
+    "prompt": "Research current object-storage prices across AWS, GCP, and Azure.",
+    "expected": "DO_NOT_USE",
+    "rationale": "This is a current market research task."
+  },
+  {
+    "id": "skip-unrelated-folder-du",
+    "category": "project-storage",
+    "prompt": "Summarize the size of folders inside this video-production project.",
+    "expected": "DO_NOT_USE",
+    "rationale": "The target is not Codex-owned storage."
+  }
+]
